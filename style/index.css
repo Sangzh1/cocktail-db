@@ -397,6 +397,10 @@ Cocktail
   }
 }
 
+.hidden{
+  display: none;
+}
+
 .loader,
 .loader:before,
 .loader:after {
@@ -436,6 +440,29 @@ Cocktail
 
 .loader:after {
   left: 1.5em;
+}
+
+.cocktail-center{
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cocktail{
+    background: var(--mainWhite);
+    margin-bottom: 2rem;
+    box-shadow: var(--lightShadow);
+    transition: var(--mainTransition);
+    width: 350px;
+}
+
+@media screen and (min-width: 576px) {
+  .cocktails-center{
+    grid-template-columns: repeat(auto-fill,minmax(338.8px,1fr));
+  }
 }
 
 @-webkit-keyframes load1 {
